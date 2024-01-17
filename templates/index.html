@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<center>
+	
+<!-- <h1 class='display-1'>Automated Image</h1>
+<h1 class='display-1'>Captioning</h1> -->
+
+<div style="padding-top: 50px;">
+    <h1 class="display-1" style="text-align: center; text-decoration: underline; font-weight: bold; font-size: 2rem;">
+      Image Captioning
+    </h1>
+  </div>
+
+<br>
+<br>
+
+<!-- <form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <input type="file" name='file1'>
+<input type="submit" name="btn" value='predict caption' class='btn btn-warning'> 
+</form> -->
+
+<form action="{{ url_for('after') }}" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding-top: 20px;">
+    <label for="file1" class="input-label" style="font-weight: bold;">Choose an image:</label>
+    <input type="file" name="file1" id="file1" style="padding: 10px; border: 1px solid #000000; border-radius: 5px;">
+    <button type="submit" name="btn" value="Predict Caption" class="btn btn-primary" style="background-color: #007bff; border: none; padding: 10px 20px; border-radius: 5px; color: #fff; font-weight: bold;">
+      Predict Caption
+    </button>
+  </form>
+
+
+</center>
+
+{%endblock%}

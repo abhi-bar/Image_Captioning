@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+    
+{%block content%}
+
+<center>
+
+
+	<div style="padding-top: 50px;">
+		<h1 class="display-1" style="text-align: center; text-decoration: underline; font-weight: bold; font-size: 2rem;">
+			Predicted Caption
+		</h1>
+	  </div>
+	
+
+	<br>
+	<br>
+	
+<img src="{{url_for('static', filename='file.jpg')}}" alt="image" height=340px>
+
+<br>
+
+<h2 class='text-white'>
+	{{data}}
+</h2>
+
+</center>
+
+{%endblock%}
